@@ -1,7 +1,7 @@
 // TaskForm.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTask } from './actions';
+import { addTask } from '../actions';
 
 const TaskForm = () => {
   const [task, setTask] = useState('');
@@ -13,7 +13,7 @@ const TaskForm = () => {
   };
 
   return (
-    <div>
+    <div className='container task-input'>
       <input type="text" value={task} onChange={(e) => setTask(e.target.value)} />
       <button onClick={handleAddTask}>Add Task</button>
     </div>

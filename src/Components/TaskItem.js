@@ -1,7 +1,7 @@
 // TaskItem.js
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteTask } from './actions';
+import { deleteTask } from '../actions';
 
 const TaskItem = ({ task }) => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const TaskItem = ({ task }) => {
   };
 
   return (
-    <div>
+    <div className='container task-list'>
       <span>{task.title}</span>
       <button onClick={handleDeleteTask}>Delete</button>
     </div>
